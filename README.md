@@ -60,3 +60,4 @@ The app will have the following features based on the following user stories:
     Then the user should see the most recent events displayed
 
 Dependencies:
+- serverless (installed globally)
