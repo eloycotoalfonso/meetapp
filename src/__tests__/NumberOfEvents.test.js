@@ -8,11 +8,11 @@ describe('NumberOfEvents /> component', () =>{
     let NEventsWrapper;
     beforeAll(() => {
         NEventsWrapper = shallow(<NumberOfEvents />);
-    })
+    });
 
     test("render the component", () => {
         expect(NEventsWrapper).toBeDefined();
-    })
+    });
 
     test("render number of events input", () => {
         expect(NEventsWrapper.find('.eventsNumber')).toHaveLength(1);
