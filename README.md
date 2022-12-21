@@ -59,5 +59,9 @@ The app will have the following features based on the following user stories:
     When user doesn’t specify a time frame to show events
     Then the user should see the most recent events displayed
 
-Dependencies:
+## Dependencies:
 - serverless (installed globally)
+- Axios
+
+## Developing dependencies:
+- enzyme
