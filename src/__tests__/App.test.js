@@ -5,7 +5,7 @@ import EventList from '../EventList';
 import CitySearch from '../CitySearch';
 import NumberOfEvents from '../NumberOfEvents';
 import { mockData } from '../mock_data';
-import { extractLocations, getEvents } from '../api_development';
+import { extractLocations, getEvents } from '../api';
 
 describe('<App /> component', () => {
     

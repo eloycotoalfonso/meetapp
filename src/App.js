@@ -4,7 +4,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import { mockData } from './mock_data';
 import NumberOfEvents from './NumberOfEvents';
-import { getEvents, extractLocations } from './api_development';
+import { getEvents, extractLocations } from './api';
 import './nprogress.css';
 
 
