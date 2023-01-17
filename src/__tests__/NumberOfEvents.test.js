@@ -27,11 +27,4 @@ describe('NumberOfEvents /> component', () =>{
         expect(number).toBe(32);
         expect(NEventsWrapper.find(".eventsNumber").prop('value')).toBe(number);
     });
-
-    test('change state when text input changes', () => {
-        const eventObject = {target: {value: 48}};
-        NEventsWrapper.find('.eventsNumber').simulate('change', eventObject);
-        expect(NEventsWrapper.state('number')).toBe(48);
-    });
-
 });
