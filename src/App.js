@@ -39,7 +39,7 @@ class App extends Component {
       const locationEvents = (location === 'all')?
       events :
       events.filter((event) => event.location === location);
-      const eventsToShow = locationEvents.slice(0,eventCount);
+      const eventsToShow = locationEvents.slice(0, eventCount);
       this.setState({
         events: eventsToShow,
         selectedLocation: location
@@ -50,7 +50,7 @@ class App extends Component {
       const locationEvents = (selectedLocation === 'all')?
       events:
       events.filter((event) => event.location === selectedLocation);
-      const eventsToShow = locationEvents.slice(0,inputNumber);
+      const eventsToShow = locationEvents.slice(0, inputNumber);
       this.setState({
         events: eventsToShow,
         eventCount: inputNumber
