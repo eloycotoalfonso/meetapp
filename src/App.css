@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+:root {
+  background: linear-gradient(lightgrey, white);
+}
+
 .App {
   text-align: center;
   padding: 2% 5%;
@@ -8,6 +13,17 @@
   box-sizing: border-box;
 }
 
+h1 {
+  color:black;
+  margin: .25em 0 30px;
+}
+
+.SearchBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -15,6 +31,7 @@ ul {
 
 p {
   margin: 5px 0;
+  text-align: justify;
 }
 
 .display-none {
@@ -41,9 +58,8 @@ input[type="number"] {
 }
 
 .CitySearch {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 300px;
+  display: grid;
+  grid-row: auto auto auto auto;
   max-width: 300px;
   margin: auto;
   position: relative;
@@ -82,10 +98,13 @@ input[type="number"] {
   text-align: left;
   border: 1px solid #ccc;
   border-radius: 4px;
+  max-width: 50%;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.details-btn {
+.details-btn, .expand {
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -112,9 +131,10 @@ input[type="number"] {
 
 .description {
   overflow-x: hidden;
+  margin-top: 5px;
 }
 
-.numberOfEvents {
+.NumberOfEvents {
   width: 200px;
   margin: 20px auto;
   text-align: center;
@@ -131,6 +151,7 @@ input[type="number"] {
 .Alert {
   position: fixed;
   top: 20px;
+  margin: 0 auto;
 }
 
 .data-vis-wrapper {
@@ -209,5 +230,13 @@ input[type="number"] {
     max-width: 50%;
     min-width: auto;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 1000px){
+  .SearchBox{
+    grid-row: auto auto;
+    align-self: center;
+    text-align: center;
   }
 }

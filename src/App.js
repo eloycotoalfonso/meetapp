@@ -56,8 +56,13 @@ class App extends Component {
 
     return (
       <div className = "App">
-        <CitySearch locations = {this.state.locations} updateEvents = {this.updateEvents} />
-        <NumberOfEvents updateEvents = {this.updateEvents}/>
+        <h1> MeetApp</h1>
+        <div className = "SearchBox">
+          <h3> Select your city </h3>
+          <CitySearch locations = {this.state.locations} updateEvents = {this.updateEvents} />
+          <h3> Events to display </h3>
+          <NumberOfEvents updateEvents = {this.updateEvents}/>
+        </div>
         <EventList events = {this.state.events} eventCount = {this.state.eventCount}/>
       </div>
     );
