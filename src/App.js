@@ -6,6 +6,7 @@ import { mockData } from './mock_data';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
+import { OfflineAlert } from './Alert';
 
 
 class App extends Component {
@@ -57,6 +58,11 @@ class App extends Component {
     return (
       <div className = "App">
         <h1> MeetApp</h1>
+        <div className='OfflineAlert Alert'>
+          {!navigator.onLine && ( 
+            <OfflineAlert text = {'You are currently offline. Events might not be up to date'} />
+          )}
+        </div>
         <div className = "SearchBox">
           <h3> Select your city </h3>
           <CitySearch locations = {this.state.locations} updateEvents = {this.updateEvents} />
