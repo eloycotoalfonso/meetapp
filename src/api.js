@@ -62,7 +62,7 @@ export const getEvents = async () => {
     }
 
     //If offline, the app get events from local storage
-    if(!navigatos.onLine) {
+    if(!navigator.onLine) {
         const data = localStorage.getItem('lastEvents');
         NProgress.done();
         return data ? JSON.parse(data) : [];
