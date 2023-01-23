@@ -55,13 +55,23 @@ const getToken = async (code) => {
 export const getEvents = async () => {
     NProgress.start();
 
+    // If running locally, use the mock data
     if(window.location.href.startsWith('http://localhost')) {
         NProgress.done();
         return mockData;
     }
 
+    //If offline, the app get events from local storage
+    if(!navigatos.onLine) {
+        const data = localStorage.getItem('lastEvents');
+        NProgress.done();
+        return data ? JSON.parse(data) : [];
+    }
+
+
     const token = await getAccessToken();
 
+    //If there is a token, get events from the API
     if (token) {
         removeQuery();
         const url = 'https://vo9340o271.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
