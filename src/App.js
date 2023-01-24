@@ -89,17 +89,14 @@ class App extends Component {
           )}
         </div>
         <div className = "SearchBox">
-          <h3> Select your city </h3>
+          <h3 className = 'SearchBoxTitle'> Select your city </h3>
           <CitySearch locations = {this.state.locations} updateEvents = {this.updateEvents} />
-          <h3> Events to display </h3>
+          <h3 className = 'SearchBoxTitle'> Events to display </h3>
           <NumberOfEvents updateEvents = {this.updateEvents}/>
         </div>
         <div className = 'data-vis-wrapper'>
-          <div className = 'pie'>
             <h4> Events by topic </h4>
             <EventGerne events = {this.state.events} />
-          </div>
-          <div className = 'dots'>
           <h4> Events in each city </h4>
             <ResponsiveContainer height = {400}>
               <ScatterChart
@@ -113,7 +110,6 @@ class App extends Component {
               </ScatterChart>
             </ResponsiveContainer>
           </div>
-        </div>
         <EventList events = {this.state.events} eventCount = {this.state.eventCount}/>
         <WelcomeScreen showWelcomeScreen = {this.state.showWelcomeScreen} getAccessToken = {() => { getAccessToken() }} />
       </div>
