@@ -28,8 +28,6 @@ h1 {
 ul {
   padding: 0;
   list-style: none;
-  position: relative;
-  bottom: -30px;
 }
 
 .SearchBoxTitle{
@@ -81,7 +79,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 43px;
+  top: 60px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
