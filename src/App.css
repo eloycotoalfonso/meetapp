@@ -22,12 +22,22 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 ul {
   padding: 0;
   list-style: none;
+  position: relative;
+  bottom: -30px;
 }
+
+.SearchBoxTitle{
+  position: relative;
+  bottom: -30px;
+}
+
+
 
 p {
   margin: 5px 0;
