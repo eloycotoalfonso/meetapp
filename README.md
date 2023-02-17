@@ -7,6 +7,13 @@ This is a serverless app designed to display information about different upcomin
 # Characteristics
 The app will have the following features based on the following user stories:
 
+## Feature 1: FILTER EVENTS BY CITY
+ User's stoty: As a user I should be able to get events in a specific city from the cities were events are available.
+
+### Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
+### Scenario 2: A user should see a list of suggestions when they search for a city.
+### Scenario 3: User can select a city from the suggested list.
+
 
 ## Feature 2:  SHOW/HIDE AN EVENT’S DETAILS
   User’s story: As a User, I should be able to show/hide an event’s details so that I can see the information of one event or scroll quickly through the events to search for one of my interest. 
